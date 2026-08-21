@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>The Book Library</title>
@@ -31,64 +31,63 @@
       data-toggle="collapse"
       data-target="#demo"
       class="btn btn-info"
+      type="button"
     >
       Add new book
     </button>
 
     <div id="demo" class="collapse">
-      <div class="form-group">
-
-        <!-- Title -->
-        <label for="title">Title:</label>
-        <input
-          type="text"
-          class="form-control"
-          id="title"
-          name="title"
-          required
-        />
-
-        <!-- Author -->
-        <label for="author">Author:</label>
-        <input
-          type="text"
-          class="form-control"
-          id="author"
-          name="author"
-          required
-        />
-
-        <!-- Pages -->
-        <label for="pages">Pages:</label>
-        <input
-          type="number"
-          class="form-control"
-          id="pages"
-          name="pages"
-          min="1"
-          step="1"
-          required
-        />
-
-        <!-- Read -->
-        <label class="form-check-label">
+      <form id="form">
+        <div class="form-group">
+          <!-- Title -->
+          <label for="title">Title:</label>
           <input
-            type="checkbox"
-            class="form-check-input"
-            id="check"
+            type="text"
+            class="form-control"
+            id="title"
+            name="title"
+            required
           />
-          Read
-        </label>
 
-        <!-- Submit -->
-        <input
-          type="submit"
-          value="Submit"
-          class="btn btn-primary"
-          onclick="submit();"
-        />
+          <!-- Author -->
+          <label for="author">Author:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="author"
+            name="author"
+            required
+          />
 
-      </div>
+          <!-- Pages -->
+          <label for="pages">Pages:</label>
+          <input
+            type="number"
+            class="form-control"
+            id="pages"
+            name="pages"
+            min="1"
+            step="1"
+            required
+          />
+
+          <!-- Read -->
+          <div class="form-check">
+            <label class="form-check-label">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="check"
+                name="read"
+              />
+              Read
+            </label>
+          </div>
+
+          <!-- Submit -->
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
     </div>
 
     <table class="table" id="display">
@@ -102,15 +101,7 @@
         </tr>
       </thead>
 
-      <tbody>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
+      <tbody id="book-list"></tbody>
     </table>
 
     <script src="script.js"></script>
