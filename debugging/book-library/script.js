@@ -33,8 +33,10 @@ function submit() {
   }
 
   // check if page number is a valid integer > 0
-  if (isNaN(pages) || pages <= 0 || !Number.isInteger(pages)) {
-    alert("number of pages need to be a valid integer >0!");
+  const pageNumber = Number(pages.value);
+
+  if (!Number.isInteger(pageNumber) || pageNumber <= 0) {
+    alert("Number of pages needs to be a valid integer greater than 0!");
     return;
   }
 
