@@ -42,3 +42,4 @@ function getLatestComic() {
 // Make the API call
 getLatestComic();
 ```;
+//
