@@ -10,12 +10,11 @@ let totalCost = 0;
 
 for (const { itemName, quantity, unitPricePence } of order) {
   const itemTotal = quantity * unitPricePence;
+  totalCost += itemTotal;
 
   console.log(
-    `${quantity}       ${itemName.padEnd(20)}${(itemTotal / 100).toFixed(2)}`
+    `${quantity.toString().padEnd(10)}${itemName.padEnd(20)}${(itemTotal / 100).toFixed(2)}`
   );
-
-  totalCost += itemTotal;
 }
 
 console.log(`Total: ${(totalCost / 100).toFixed(2)}`);
