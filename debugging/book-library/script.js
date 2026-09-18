@@ -1,5 +1,4 @@
 const myLibrary = [];
-
 const titleInput = document.getElementById("title");
 const authorInput = document.getElementById("author");
 const pagesInput = document.getElementById("pages");
@@ -75,23 +74,20 @@ function submit() {
     form.reset();
   }
 }
-
 function Book(title, author, pages, check) {
   this.title = title;
   this.author = author;
   this.pages = pages;
   this.check = check;
 }
-
 function render() {
   const table = document.getElementById("display");
   const rowsNumber = table.rows.length;
 
   // Remove existing rows except header
-  for (let n = rowsNumber - 1; n > 0; n--) {
-    table.deleteRow(n);
+  while (table.rows.length > 1) {
+    table.deleteRow(-1);
   }
-
   for (let i = 0; i < myLibrary.length; i++) {
     const row = table.insertRow();
 
