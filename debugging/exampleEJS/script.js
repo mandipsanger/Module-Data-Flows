@@ -1,3 +1,4 @@
+const myLibrary = [];
 const titleInput = document.getElementById("title");
 const authorInput = document.getElementById("author");
 const pagesInput = document.getElementById("pages");
@@ -5,8 +6,6 @@ const readInput = document.getElementById("check");
 
 const form = document.getElementById("form");
 const bookList = document.getElementById("book-list");
-
-const myLibrary = [];
 
 function Book(title, author, pages, read) {
   this.title = title;
