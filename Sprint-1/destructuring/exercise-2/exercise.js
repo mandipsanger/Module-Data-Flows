@@ -76,16 +76,18 @@ let hogwarts = [
 //- Use object destructuring to extract the values you need out of each element in the array.
 
 // Task 1
-for (const { firstName, house } of hogwarts) {
+console.log("Task 1 - Gryffindor students:");
+for (const { firstName, lastName, house } of hogwarts) {
   if (house === "Gryffindor") {
-    console.log(firstName);
+    console.log(firstName, lastName);
   }
 }
 
 // Task 2
-for (const { firstName, occupation, pet } of hogwarts) {
+console.log("Task 2 - Teachers with pets:");
+for (const { firstName, lastName, occupation, pet } of hogwarts) {
   if (occupation === "Teacher" && pet) {
-    console.log(firstName);
+    console.log(firstName, lastName);
   }
 }
 //## Task 2
